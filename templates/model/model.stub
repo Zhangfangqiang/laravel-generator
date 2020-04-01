@@ -1,0 +1,25 @@
+<?php
+
+namespace $NAMESPACE_MODEL$;
+
+use App\Models\Traits\GetPublicData;
+use Illuminate\Database\Eloquent\Model;
+
+class $MODEL_NAME$ extends Model
+{
+
+    use GetPublicData;
+
+    /**
+     * 表格
+     */
+    public $table = '$TABLE_NAME$';
+
+
+    /**
+     * 可填充字段
+     */
+    public $fillable = [
+        $FIELDS$
+    ];
+}

@@ -1,0 +1,7 @@
+<div class="layui-form-item">
+    <label class="layui-form-label">$FIELD_NAME_TITLE$:</label>
+    <div class="layui-input-block">
+        <input type="text" name="$FIELD_NAME$" value="" class="layui-input">
+    </div>
+</div>
+

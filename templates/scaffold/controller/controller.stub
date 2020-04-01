@@ -1,0 +1,43 @@
+<?php
+
+namespace $NAMESPACE_CONTROLLER$;
+
+use Illuminate\Http\Request;
+use $NAMESPACE_MODEL$\$MODEL_NAME$;
+use $NAMESPACE_REQUEST$\$MODEL_NAME$Request;
+use $NAMESPACE_APP$\Http\Controllers\Controller;
+
+class $MODEL_NAME$Controller extends Controller
+{
+
+    /**
+     * 展示数据页
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function index()
+    {
+        return view('admin.$MODEL_NAME_PLURAL_SNAKE$.index' );
+    }
+
+    /**
+     * 展示创建页
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function create()
+    {
+        return view('admin.$MODEL_NAME_PLURAL_SNAKE$.create');
+    }
+
+
+    /**
+     * 展示编辑页
+     * @param $id
+     * @param $MODEL_NAME$
+     */
+    public function edit($MODEL_NAME$Request $request ,$MODEL_NAME$ $$MODEL_NAME_CAMEL$)
+    {
+        return view('admin.$MODEL_NAME_PLURAL_SNAKE$.edit', compact('$MODEL_NAME_CAMEL$'));
+    }
+
+}

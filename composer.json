@@ -1,0 +1,55 @@
+{
+    "name": "ZhangFang/laravel-generator",
+    "type": "library",
+    "description": " Laravel Generator",
+    "keywords": [
+        "laravel",
+        "api",
+        "model",
+        "request",
+        "migration",
+        "model",
+        "crud",
+        "repository",
+        "view",
+        "test",
+        "generator",
+        "swagger"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Zhang Fang",
+            "email": "zf18600004319@aliyun.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "illuminate/support": "^6.0.0",
+        "laracasts/flash": "~3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~5.0",
+        "mockery/mockery": "~0.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "ZhangFang\\Generator\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "\\ZhangFang\\Generator\\ZhangFangGeneratorServiceProvider"
+            ]
+        }
+    }    
+}

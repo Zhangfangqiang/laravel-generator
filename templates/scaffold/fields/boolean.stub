@@ -1,0 +1,6 @@
+<div class="layui-form-item">
+    <label class="layui-form-label">$FIELD_NAME_TITLE$:</label>
+    <div class="layui-input-block">
+        <input type="checkbox" name="$FIELD_NAME$" lay-skin="primary" title="写作" checked="">
+    </div>
+</div>

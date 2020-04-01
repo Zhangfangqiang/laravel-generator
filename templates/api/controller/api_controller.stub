@@ -1,0 +1,56 @@
+<?php
+
+namespace $NAMESPACE_API_CONTROLLER$;
+
+use Illuminate\Http\Request;
+use $NAMESPACE_MODEL$\$MODEL_NAME$;
+use $NAMESPACE_API_REQUEST$\$MODEL_NAME$ApiRequest;
+use $NAMESPACE_APP$\Http\Controllers\Controller;
+use App\Http\Resources\Admin\$MODEL_NAME$Resources;
+
+
+class $MODEL_NAME$ApiController extends Controller
+{
+
+    /**
+     * 数据
+     * @param $MODEL_NAME
+     */
+    public function index($MODEL_NAME$APIRequest $request , $MODEL_NAME$ $$MODEL_NAME_CAMEL$ )
+    {
+        $MODEL_NAME$Resources::wrap('data');
+        return $MODEL_NAME$Resources::collection($$MODEL_NAME_CAMEL$->getData($request->all()));
+    }
+
+    /**
+     * 创建
+     * @param $MODEL_NAME
+     */
+    public function store($MODEL_NAME$APIRequest $request)
+    {
+        $input              = $request->all();
+        $$MODEL_NAME_CAMEL$ = $MODEL_NAME$::create($input);
+        return response('创建成功', 200);
+    }
+
+    /**
+     * 更新
+     * @param $MODEL_NAME
+     */
+    public function update($MODEL_NAME$ $$MODEL_NAME_CAMEL$ , $MODEL_NAME$APIRequest $request)
+    {
+        $input = $request->all();
+        $$MODEL_NAME_CAMEL$->update($input);
+        return response('修改成功', 200);
+    }
+
+    /**
+     * 删除
+     * @param $MODEL_NAME
+     */
+    public function destroy($MODEL_NAME$ $$MODEL_NAME_CAMEL$)
+    {
+        $$MODEL_NAME_CAMEL$->delete();
+        return response( 204);
+    }
+}

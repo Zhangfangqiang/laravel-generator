@@ -1,0 +1,7 @@
+<div class="layui-form-item">
+    <label class="layui-form-label">$FIELD_NAME_TITLE$:</label>
+    <div class="layui-input-block">
+        <textarea name="$FIELD_NAME$" placeholder="请输入内容" class="layui-textarea"></textarea>
+    </div>
+</div>
+
