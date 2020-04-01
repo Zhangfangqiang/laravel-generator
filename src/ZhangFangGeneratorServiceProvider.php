@@ -1,6 +1,6 @@
 <?php
 
-namespace InfyOm\Generator;
+namespace ZhangFang\Generator;
 
 use Illuminate\Support\ServiceProvider;
 use ZhangFang\Generator\Commands\APIScaffoldGeneratorCommand;
