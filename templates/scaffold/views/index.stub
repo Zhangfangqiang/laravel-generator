@@ -153,12 +153,12 @@
 
             var array = [];
 
-            $('.layui-form-item input').each(function (index, item) {
+            $('.layui-form-item input[name] , .layui-form-item select[name]').each(function (index, item) {
                 var val       = $(this).val();
                 var inputName = $(this).attr('name');
                 var where     = $(this).data('where');
 
-                if ('' != val) {
+                if ('' != val && '' != inputName) {
                     /*如果是模糊查询*/
                     if ('like' == where) {
                         val = '%' + val + '%';
