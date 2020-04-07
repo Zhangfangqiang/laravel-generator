@@ -1,5 +1,7 @@
-<!-- $FIELD_NAME_TITLE$ Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('$FIELD_NAME$', __('models/$TABLE_NAME$.fields.$FIELD_NAME$').':') !!}
-    {!! Form::email('$FIELD_NAME$', null, ['class' => 'form-control']) !!}
+<div class="layui-form-item">
+    <label class="layui-form-label">$FIELD_NAME_TITLE$:</label>
+    <div class="layui-input-block">
+        <input type="email" name="$FIELD_NAME$" value="" class="layui-input">
+    </div>
 </div>
+

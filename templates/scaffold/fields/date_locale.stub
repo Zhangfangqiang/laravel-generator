@@ -1,14 +1,6 @@
-<!-- $FIELD_NAME_TITLE$ Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('$FIELD_NAME$', __('models/$TABLE_NAME$.fields.$FIELD_NAME$').':') !!}
-    {!! Form::date('$FIELD_NAME$', null, ['class' => 'form-control','id'=>'$FIELD_NAME$']) !!}
+    <label class="layui-form-label">$FIELD_NAME_TITLE$:</label>
+    <div class="layui-input-block">
+        <input type="text" name="$FIELD_NAME$" placeholder=" - " autocomplete="off" class="layui-input" id="$FIELD_NAME$">
+    </div>
 </div>
-
-@push('scripts')
-    <script type="text/javascript">
-        $('#$FIELD_NAME$').datetimepicker({
-            format: 'YYYY-MM-DD HH:mm:ss',
-            useCurrent: false
-        })
-    </script>
-@endpush
