@@ -12,7 +12,7 @@
 
     <!--  lay-submit  绑定触发提交的元素-->
     <!--  lay-filter  事件过滤器，主要用于事件的精确匹配，跟选择器是比较类似的。其实它并不私属于form模块，它在 layui 的很多基于事件的接口中都会应用到。 理解为id选择器 -->
-    <input type="button" id="$MODEL_NAME_PLURAL_SNAKE$-back-submit" lay-filter="$MODEL_NAME_PLURAL_SNAKE$-back-submit" lay-submit value="确认">
+    <input type="button" hidden id="$MODEL_NAME_PLURAL_SNAKE$-back-submit" lay-filter="$MODEL_NAME_PLURAL_SNAKE$-back-submit" lay-submit value="确认">
 </form>
 @endsection
 
