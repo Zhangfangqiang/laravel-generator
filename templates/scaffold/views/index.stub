@@ -94,13 +94,6 @@
         });
 
         /**
-         * 设置ajax csrf_token
-         */
-        $.ajaxSetup({
-            data: {_token: '{{csrf_token()}}' },
-        });
-
-        /**
          * 刷新
          */
         $('#$MODEL_NAME_PLURAL_SNAKE$-refresh').click(function(){
@@ -179,11 +172,9 @@
                 }
             });
 
-            var field = {'otherWhere': array};
-
             //执行重载
             table.reload('$MODEL_NAME_PLURAL_SNAKE$-table', {
-                where: field
+                where: {'otherWhere': array}
             });
         });
 
@@ -216,6 +207,20 @@
             limits: [10, 15, 20, 25, 30],
             text: "对不起，加载出现异常！",
         });
+
+
+        /**
+         * 监听表格排序按钮
+         */
+        table.on('sort($MODEL_NAME_PLURAL_SNAKE$-table)', function (obj) {
+            table.reload('$MODEL_NAME_PLURAL_SNAKE$-table', {
+                initSort: obj,
+                where: {
+                    order: [obj.field, obj.type]
+                }
+            });
+        });
+
 
         /**
          * 监听表格操作按钮
